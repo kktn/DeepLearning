@@ -33,6 +33,9 @@ def OR(x1, x2):
     else:
         return 0
 
+def XOR(x1, x2):
+    return AND(NAND(x1, x2), OR(x1, x2))
+
 raw_args = input()
 args = raw_args.split()
 if args[0] == 'AND':
@@ -41,5 +44,7 @@ elif args[0] == 'NAND':
     print(NAND(int(args[1]), int(args[2])))
 elif args[0] == 'OR':
     print(OR(int(args[1]), int(args[2])))
+elif args[0] == 'XOR':
+    print(XOR(int(args[1]), int(args[2])))
 else:
     print('bye')
