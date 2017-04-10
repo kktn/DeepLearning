@@ -8,13 +8,20 @@ def AND(x1, x2):
     # bias
     b = -0.7
     val = numpy.sum(w*x) + b
-    if val >= 0:
+    if val > 0:
         return 1
     else:
         return 0
 
 def NAND(x1, x2):
-    pass
+    x = numpy.array([x1, x2])
+    w = numpy.array([-0.5, -0.5])
+    b = 0.7
+    val = numpy.sum(w*x) + b
+    if val > 0:
+        return 1
+    else:
+        return 0
 
 def OR(x1, x2):
     pass
