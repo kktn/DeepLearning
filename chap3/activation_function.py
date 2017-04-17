@@ -46,6 +46,11 @@ def neuron():
 
     print("Result: {0}".format(Y))
 
+def softmax(a):
+    exp_a = np.exp(a)
+    sum_exp_a = np.sum(exp_a)
+    y = exp_a / sum_exp_a
+    return y
 
 # Step function
 # x = np.arange(-5.0, 5.0, 0.1)
